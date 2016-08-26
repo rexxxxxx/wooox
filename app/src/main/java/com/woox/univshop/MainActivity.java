@@ -25,6 +25,9 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,22 +36,10 @@ public class MainActivity extends AppCompatActivity {
     private Button gps_btn;
     private TextView gps_txt;
 
-//    MongoClientURI uri = new MongoClientURI( "mongodb://127.0.0.1:27017/woox" );
-//    MongoClient mongoClient = new MongoClient(uri);
-//    MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
+    //retrofit
+    Task task = new Task(1, "my task title");
+//    Call<Task> call = Task.PostTest.createTask(task);
 
-//    MongoCollection<Document> collection = db.getCollection("mycoll");
-//
-//    // insert a document
-//    Document document = new Document("x", 1)
-//    collection.insertOne(document);
-//    document.append("x", 2).append("y", 3);
-//
-//// replace a document
-//    collection.replaceOne(Filters.eq("_id", document.get("_id")), document);
-//
-//    // find documents
-//    List<Document> foundDocument = collection.find().into(new ArrayList<Document>());
 
 
     @Override
