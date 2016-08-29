@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 
-public class apiClient {
+public class retrofitClient {
     public static final String BASE_URL = "http://localhost:27017";
     private static Retrofit retrofit = null;
 

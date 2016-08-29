@@ -27,6 +27,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Retrofit;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,8 +37,15 @@ public class MainActivity extends AppCompatActivity {
     private Button gps_btn;
     private TextView gps_txt;
 
+
+
     //retrofit
+    private Retrofit retrofitClient = new retrofitClient().getClient();
+
     Task task = new Task(1, "my task title");
+
+
+
 //    Call<Task> call = Task.PostTest.createTask(task);
 
 
@@ -50,13 +58,12 @@ public class MainActivity extends AppCompatActivity {
         //commit test Kwook
         AppEventsLogger.activateApp(this);
 
+
+
         gps_btn = (Button) findViewById(R.id.gps_btn);
         gps_txt = (TextView) findViewById(R.id.gps_txt);
 
-
-
-
-        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         // GPS 정보를 보여주기 위한 이벤트 클래스 등록
         gps_btn.setOnClickListener(new View.OnClickListener() {
 
