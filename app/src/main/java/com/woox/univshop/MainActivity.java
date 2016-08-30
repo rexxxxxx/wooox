@@ -12,21 +12,10 @@ import android.widget.Toast;
 //facebook
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
+import com.woox.univshop.interfaces.LogEasyApi;
 
 //mongodb
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Filters;
 
-import org.bson.Document;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.Retrofit;
 
 
@@ -41,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     //retrofit
     private Retrofit retrofitClient = new retrofitClient().getClient();
+
+    LogEasyApi service = retrofitClient.create(LogEasyApi.class);
 
     Task task = new Task(1, "my task title");
 
